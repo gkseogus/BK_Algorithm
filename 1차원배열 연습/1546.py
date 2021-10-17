@@ -12,5 +12,3 @@ for i in range(n):
 
 avg = sum/n
 print(avg)
-
-
