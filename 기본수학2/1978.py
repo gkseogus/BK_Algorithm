@@ -1,17 +1,15 @@
 x = int(input())
+y = list(map(int, input().split()))
 
-lst = []
 count = 0
 
-for i in range(0, x):
-    lst.append(input())
-print(lst)
-
-for i in lst:
-    if(i > 1):
-        for j in range(2, i):
-            if (i % j) == 0:
-                break
-            else:
-                count += 1
+for i in y:
+    cnt = 0
+    if(i == 1):
+        continue
+    for j in range(2, i+1):
+        if(i % j == 0):
+            cnt += 1
+    if(cnt == 1):
+        count += 1
 print(count)
